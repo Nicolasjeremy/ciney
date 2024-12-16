@@ -55,3 +55,10 @@ document.getElementById("logout")?.addEventListener("click", () => {
             console.error("Error signing out:", error);
         });
 });
+
+if (user) {
+    console.log("User ID:", user.uid);
+    db.collection("users").doc(user.uid).get().then(doc => {
+        console.log("isAdmin:", doc.exists ? doc.data().isAdmin : "No data found");
+    });
+}

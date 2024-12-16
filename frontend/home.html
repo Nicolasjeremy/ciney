@@ -7,28 +7,143 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <div class="video-grid">
-        <div class="video-placeholder" data-video="https://www.youtube.com/embed/CdFLEfRr3Qk?si=70FmWNpR4z7wqqfq">Video 1</div>
-        <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID2">Video 2</div>
-        <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID3">Video 3</div>
-        <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID4">Video 4</div>
-        <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID5">Video 5</div>
-    </div>
+    <header>
+        <h1 class="site-title">CINEY</h1>
+    </header>
 
+    <main>
+        <section class="video-grid">
+            <!-- Video Card 1 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/CdFLEfRr3Qk?si=70FmWNpR4z7wqqfq">
+                    <img src="./image/1.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Sapiderman</h2>
+                    <p>Step-by-step guide to building a Netflix-like platform.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID2">
+                    <img src="./image/2.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>The dark knight rises</h2>
+                    <p>Learn how to use CSS grid for responsive layouts.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID3">
+                    <img src="./image/3.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Gangster Squad</h2>
+                    <p>Understand how to dynamically update your webpage.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID4">
+                    <img src="./image/4.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>The wizards of Oz</h2>
+                    <p>Master the basics of CSS Flexbox for flexible layouts.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 5 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID5">
+                    <img src="./image/5.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Puss in Boots</h2>
+                    <p>Learn how to make your websites responsive.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 6 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID6">
+                    <img src="./image/6.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Rango</h2>
+                    <p>Integrate Firebase authentication into your projects.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 7 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID7">
+                    <img src="./image/7.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>The Croods</h2>
+                    <p>Manage state effectively in React with hooks.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 8 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID8">
+                    <img src="./image/8.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>The Expandables</h2>
+                    <p>Create a simple Todo app using JavaScript.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 9 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID9">
+                    <img src="./image/9.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Tintin</h2>
+                    <p>Get started with backend development using Node.js and Express.</p>
+                </div>
+            </div>
+
+            <!-- Video Card 10 -->
+            <div class="video-card">
+                <div class="video-placeholder" data-video="https://www.youtube.com/embed/VIDEO_ID9">
+                    <img src="./image/10.jpg" alt="Video Cover">
+                </div>
+                <div class="video-details">
+                    <h2>Despicable me 2</h2>
+                    <p>Useing only zilong</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay -->
     <div class="overlay" id="overlay">
         <div class="overlay-content">
             <iframe id="video-player" src="" frameborder="0" allowfullscreen></iframe>
-            <div class="comment-contanier">
+            <div class="comment-container">
+                <h3>Comments</h3>
                 <div class="comment-section" id="comment-section"></div>
                 <input type="text" class="comment-input" id="comment-input" placeholder="Add a comment...">
             </div>
         </div>
-        <div class="close-btn" onclick="closeOverlay()">Close</div>
+        <button class="close-btn" onclick="closeOverlay()">Close</button>
     </div>
+
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
     <script src="home.js"></script>
 </body>
 </html>

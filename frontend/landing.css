@@ -7,6 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #A04747;
 }
 
 .header {
@@ -23,7 +24,7 @@ body {
 }
 
 .content{
-    background-color: rgba(53, 53, 53, 0.31);
+    background-color: rgba(255, 255, 255, 0.31);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 10px;
