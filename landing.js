@@ -21,7 +21,7 @@ ui.start("#firebaseui-auth-container", {
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
     signInFlow: "popup",
-    signInSuccessUrl: "ciney/home.html",
+    signInSuccessUrl: "/home.html",
     callbacks: {
         uiShown: () => {
             document.getElementById("loader").style.display = "none";
@@ -41,7 +41,7 @@ function showWelcomeMessage(user) {
     `;
 
     document.getElementById("continue-button").addEventListener("click", () => {
-        window.location.href = "ciney/home.html";
+        window.location.href = "/home.html";
     });
 }
 
